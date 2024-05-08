@@ -49,7 +49,7 @@ class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
                         activity.handleNotificationPermission { granted ->
                             if (granted) {
                                 val startIndex = tracks.indexOf(it as Track)
-                                prepareAndPlay(tracks, startIndex)
+                                prepareAndPlay(tracks, startIndex, startActivity = false)
                             } else {
                                 if (context is Activity) {
                                     PermissionRequiredDialog(

@@ -62,7 +62,7 @@ class AlbumsActivity : SimpleMusicActivity() {
                         handleNotificationPermission { granted ->
                             if (granted) {
                                 val startIndex = albumTracks.indexOf(it as Track)
-                                prepareAndPlay(albumTracks, startIndex)
+                                prepareAndPlay(albumTracks, startIndex, startActivity = false)
                             } else {
                                 PermissionRequiredDialog(
                                     this,
